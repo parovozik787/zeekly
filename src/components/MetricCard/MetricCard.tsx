@@ -1,9 +1,9 @@
 import { Flex, Tooltip } from 'antd';
-
 import { Typography } from '../Typography/Typography';
 import { myClamp } from '../../shared/utils';
 import { MetricCardTooltip } from '../MetricCardTooltip/MetricCardTooltip';
 import Arrow from '../../assets/icons/redArrowDown.svg?react';
+import './MetricCard.scss';
 
 const MetricCard = () => {
   return (

@@ -5,7 +5,7 @@ import { Flex } from 'antd';
 import { Typography } from '../Typography/Typography';
 import { useEffect, useRef, useState } from 'react';
 import { spendMockData, conversationsMockData, cpaMockData } from './mockData';
-import { EChartsOption } from 'echarts';
+import { EChartsOption, EChartOption } from 'echarts';
 import createTooltipContent from '../ChartTooltip/ChartTooltip';
 import '../ChartTooltip/ChartTooltip.scss';
 import './ChartBlock.scss';
@@ -184,7 +184,7 @@ const Chart = () => {
   useEffect(() => {
     const chartInstance = chartRef.current?.getEchartsInstance();
     if (chartInstance) {
-      chartInstance.setOption(option);
+      chartInstance.setOption(option as EChartOption);
     }
   }, [legendSelection]);
 
