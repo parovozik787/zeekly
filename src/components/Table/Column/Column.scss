@@ -1,0 +1,18 @@
+.column {
+  display: flex;
+  align-items: center;
+  min-width: myClamp(120);
+  padding: 0 myClamp(8);
+  width: 100%;
+  height: 100%;
+
+  &--low {
+    background-color: transparent;
+  }
+  &--medium {
+    background-color: var(--color-secondary-sky-blue-op-30);
+  }
+  &--high {
+    background-color: var(--color-secondary-sky-blue);
+  }
+}

@@ -1,0 +1,17 @@
+.sidebar {
+  width: myClamp(260);
+  background: white;
+  border-right: 1px solid var(--color-border-blue);
+  padding: myClamp(24);
+  padding-top: myClamp(24);
+  background-color: var(--color-bg-blue);
+  min-width: myClamp(86);
+
+  @media (max-width: $tablet-media) {
+    width: vw(260);
+
+    &__submenu {
+      display: none;
+    }
+  }
+}

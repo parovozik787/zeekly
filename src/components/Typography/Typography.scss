@@ -1,0 +1,58 @@
+// sizes
+.typography-size-12 {
+  font-size: myClamp(12);
+}
+.typography-size-14 {
+  font-size: myClamp(14);
+}
+.typography-size-16 {
+  font-size: myClamp(16);
+}
+.typography-size-18 {
+  font-size: myClamp(18);
+}
+.typography-size-24 {
+  font-size: myClamp(24);
+}
+.typography-size-32 {
+  font-size: myClamp(32);
+}
+
+// weights
+.typography-weight-400 {
+  font-weight: var(--fw-400);
+}
+.typography-weight-500 {
+  font-weight: var(--fw-500);
+}
+.typography-weight-600 {
+  font-weight: var(--fw-600);
+}
+
+//colors
+.typography-color-black {
+  color: var(--color-primary-black);
+}
+.typography-color-dark {
+  color: var(--color-primary-dark);
+}
+.typography-color-white {
+  color: var(--color-main-white);
+}
+.typography-color-shark {
+  color: var(--color-primary-shark);
+}
+.typography-color-green {
+  color: var(--color-primary-green);
+}
+.typography-color-red {
+  color: var(--color-main-red);
+}
+
+// line-heights
+.typography-lh-120 {
+  line-height: 1.2;
+}
+.typography-lh-90 {
+  line-height: 0.9;
+}

@@ -1,0 +1,16 @@
+.nameColumn {
+  width: myClamp(228);
+  max-width: myClamp(228);
+  padding: myClamp(8) myClamp(16);
+  cursor: pointer;
+
+  &__image {
+    width: myClamp(52);
+    max-width: myClamp(52);
+    height: myClamp(52);
+  }
+
+  &__title {
+    @include truncate-lines(1);
+  }
+}

@@ -1,0 +1,10 @@
+.layout {
+  display: flex;
+}
+
+.main-content {
+  width: vw(1788);
+  flex: 1;
+  overflow-y: auto;
+  padding: vw(80) vw(104);
+}

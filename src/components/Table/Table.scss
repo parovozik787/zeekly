@@ -1,0 +1,69 @@
+.table {
+  & .ant-table-container {
+    border-radius: myClamp(16);
+    border: myClamp(1) solid var(--color-primary-gray-light);
+    border-start-start-radius: myClamp(16);
+    overflow: hidden;
+    border-start-end-radius: myClamp(16);
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    & .ant-table-body {
+      max-height: myClamp(760);
+      height: 100%;
+      overflow-y: auto;
+
+      & table {
+        height: 100%;
+      }
+
+      & .ant-table-cell-row-hover {
+        background-color: transparent;
+      }
+
+      & .ant-table-row {
+        height: 100%;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    & .ant-table-cell {
+      height: 100%;
+      background: transparent;
+      font-size: myClamp(12);
+      line-height: myClamp(20);
+      color: var(--color-primary-shark);
+      padding: myClamp(16);
+      font-weight: var(--fw-400);
+      border-bottom: myClamp(1) solid var(--color-primary-gray-light);
+      white-space: nowrap;
+      min-width: myClamp(120);
+      padding: 0;
+
+      &:before {
+        content: none !important;
+      }
+    }
+
+    & .ant-table-thead {
+      & .ant-table-cell {
+        min-width: myClamp(120);
+        padding: myClamp(16) myClamp(8);
+
+        &:first-child {
+          padding: myClamp(16);
+        }
+      }
+    }
+    & .ant-table-row:last-child {
+      & .ant-table-cell {
+        border-bottom: none;
+      }
+    }
+  }
+}

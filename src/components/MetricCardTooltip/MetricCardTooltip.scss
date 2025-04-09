@@ -1,0 +1,13 @@
+.metricCardTooltip {
+  padding: myClamp(4);
+
+  &__totalSpend {
+    background-color: var(--color-main-green);
+    font-size: myClamp(12);
+    padding: myClamp(4) myClamp(6);
+    border-radius: myClamp(16);
+  }
+}
+.metric-card__tooltip {
+  max-width: myClamp(400);
+}

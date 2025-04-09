@@ -1,0 +1,28 @@
+.account-button {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: myClamp(8);
+  border-radius: myClamp(14);
+  border: myClamp(1) solid var(--color-border-blue);
+  cursor: pointer;
+
+  &__icon {
+    width: myClamp(22);
+    height: myClamp(22);
+  }
+
+  &__carret {
+    width: myClamp(20);
+    height: myClamp(20);
+  }
+
+  @media (max-width: $tablet-media) {
+    align-self: center;
+    &__text {
+      display: none;
+    }
+    &__carret {
+      display: none;
+    }
+  }
+}

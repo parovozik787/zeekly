@@ -1,0 +1,18 @@
+$resolution-base: 2048;
+
+@function vw($size) {
+  $vw: calc($size / $resolution-base * 100);
+  @return #{$vw}vw;
+}
+
+@function myClamp($size) {
+  @return clamp(#{$size}px, vw($size), #{$size * 4}px);
+}
+
+@mixin truncate-lines($lines) {
+  -webkit-line-clamp: #{$lines};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

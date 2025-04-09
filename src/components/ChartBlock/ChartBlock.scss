@@ -1,0 +1,5 @@
+.chart-block {
+  border: myClamp(1) solid var(--color-gray-light);
+  border-radius: myClamp(16);
+  padding: myClamp(24);
+}

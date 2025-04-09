@@ -1,0 +1,15 @@
+.selector-button {
+  padding: myClamp(6);
+  background-color: var(--color-bg-blue);
+  border-radius: myClamp(8);
+
+  &__calendar-icon {
+    width: myClamp(20);
+    height: myClamp(20);
+  }
+
+  &__arrow-down {
+    width: myClamp(16);
+    height: myClamp(16);
+  }
+}

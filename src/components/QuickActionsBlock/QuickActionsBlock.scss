@@ -1,0 +1,13 @@
+.action {
+  padding: vw(24) vw(16);
+  border-radius: vw(16);
+  border: vw(1) solid var(--color-border-blue);
+
+  &__icon {
+    min-width: myClamp(38);
+    min-height: myClamp(38);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+}

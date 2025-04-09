@@ -1,0 +1,5 @@
+.metric-card {
+  padding: myClamp(24);
+  margin: myClamp(-1);
+  border: myClamp(1) solid var(--color-gray-light);
+}

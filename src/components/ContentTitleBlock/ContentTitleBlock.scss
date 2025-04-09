@@ -1,0 +1,9 @@
+.content-title-block {
+  cursor: pointer;
+
+  &__title-icon {
+    width: myClamp(32);
+    height: myClamp(32);
+    cursor: pointer;
+  }
+}

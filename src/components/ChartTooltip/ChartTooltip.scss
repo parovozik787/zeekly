@@ -1,0 +1,48 @@
+.chart-tooltip {
+  background: var(--color-primary-white);
+  border: none;
+  border-radius: myClamp(12);
+  padding: myClamp(16);
+  display: flex;
+  flex-direction: column;
+  min-width: myClamp(214);
+
+  &__date {
+    font-weight: var(--fw-400);
+    font-size: myClamp(12);
+    line-height: 1.2;
+    color: var(--color-primary-shark);
+    margin-bottom: myClamp(12);
+  }
+
+  &__info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: myClamp(12);
+    font-size: myClamp(12);
+    line-height: 1.2;
+    color: var(--color-primary-shark);
+    margin-bottom: myClamp(5);
+  }
+
+  &__info-item-value {
+    font-weight: var(--fw-600);
+    font-size: myClamp(14);
+    line-height: 1.2;
+    color: var(--color-primary-black);
+  }
+
+  &__info-item-icon {
+    width: myClamp(12);
+    height: myClamp(12);
+    margin-right: myClamp(6);
+    border-radius: myClamp(4);
+  }
+
+  &__info-item-name {
+    font-weight: var(--fw-400);
+    font-size: myClamp(12);
+    line-height: 1.2;
+    color: var(--color-primary-shark);
+  }
+}
