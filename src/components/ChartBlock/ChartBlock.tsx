@@ -1,12 +1,11 @@
 import ReactECharts from 'echarts-for-react';
-import { Flex } from 'antd';
-import { useEffect, useRef, useState } from 'react';
-import { EChartsOption } from 'echarts';
-
 import { myClamp, responsiveSize } from '../../shared/utils';
 import Legend from '../ChartLegend/ChartLegend';
+import { Flex } from 'antd';
 import { Typography } from '../Typography/Typography';
+import { useEffect, useRef, useState } from 'react';
 import { spendMockData, conversationsMockData, cpaMockData } from './mockData';
+import { EChartsOption } from 'echarts';
 import createTooltipContent from '../ChartTooltip/ChartTooltip';
 import '../ChartTooltip/ChartTooltip.scss';
 import './ChartBlock.scss';
@@ -110,7 +109,7 @@ const Chart = () => {
         fontSize: responsiveSize(14),
         margin: responsiveSize(12),
         formatter: (value) => {
-          if (value >= 1000) return `${value / 1000}k`;
+          if (value >= 1000) return value / 1000 + 'k';
           return value.toString();
         },
       },
@@ -168,7 +167,7 @@ const Chart = () => {
     ],
     tooltip: {
       trigger: 'axis',
-      position(point, params, dom, rect, size) {
+      position: function (point, _params, _dom, _rect, size) {
         const tooltipWidth = size.contentSize[0];
         const tooltipHeight = size.contentSize[1];
 
