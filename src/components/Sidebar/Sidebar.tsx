@@ -1,11 +1,13 @@
 import { Flex } from 'antd';
 
-import { items, reportsGroupItems } from './constants';
 import Menu from '../Menu/Menu';
 import AccountButton from '../AccountButton/AccountButton';
-import { myClamp } from '../../shared/utils';
-import './Sidebar.scss';
 import { Typography } from '../Typography/Typography';
+
+import { items, reportsGroupItems } from './constants';
+import { myClamp } from '../../shared/utils';
+
+import './Sidebar.scss';
 
 const Sidebar = () => {
   return (

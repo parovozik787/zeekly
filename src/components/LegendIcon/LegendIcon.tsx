@@ -1,4 +1,5 @@
-import { LegendType } from '../ChartBlock/ChartBlock';
+import { LegendType } from '../ChartLegend/types';
+
 import './LegendIcon.scss';
 
 type LegendIconProps = {

@@ -1,5 +1,6 @@
 import React, { JSX } from 'react';
-import { clsx } from 'clsx'; // опціонально, для зручного className
+import { clsx } from 'clsx';
+
 import './Typography.scss';
 
 type TypographySize = '12' | '14' | '16' | '18' | '24' | '32';

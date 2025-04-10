@@ -1,9 +1,12 @@
 import { Flex } from 'antd';
 
-import { myClamp } from '../../shared/utils';
 import { Typography } from '../Typography/Typography';
+
+import { myClamp } from '../../shared/utils';
+
 import AccountIcon from '../../assets/icons/accountIcon.svg?react';
 import Carret from '../../assets/icons/carret.svg?react';
+
 import './AccountButton.scss';
 
 const AccountButton = () => {

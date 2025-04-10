@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 
-import './Column.scss';
-import { HighlightLevel } from '../data';
 import { Typography } from '../../Typography/Typography';
+
+import { HighlightLevel } from '../types';
+
+import './Column.scss';
 
 type ColumnProps = {
   text: string;

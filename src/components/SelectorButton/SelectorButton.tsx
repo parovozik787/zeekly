@@ -1,10 +1,11 @@
 import { Flex } from 'antd';
 
 import { Typography } from '../Typography/Typography';
-import './SelectorButton.scss';
 import { myClamp } from '../../shared/utils';
 import Calendar from '../../assets/icons/calendar.svg?react';
 import ArrowDown from '../../assets/icons/arrowDown.svg?react';
+
+import './SelectorButton.scss';
 
 export const SelectorButton = () => {
   return (

@@ -1,5 +1,9 @@
-import { MenuItem } from '../Sidebar/constants';
+import clsx from 'clsx';
+import { NavLink } from 'react-router-dom';
+
 import { Typography } from '../Typography/Typography';
+
+import { MenuItem } from '../Sidebar/constants';
 
 import './Menu.scss';
 
@@ -11,7 +15,15 @@ const Menu = ({ items }: MenuProps) => {
   return (
     <ul className="menu">
       {items.map((item) => (
-        <li key={item.key} className="menu-item">
+        <NavLink
+          key={item.key}
+          to={item.key || '#'}
+          className={({ isActive }) =>
+            clsx('menu-item', {
+              'menu-item--active': isActive,
+            })
+          }
+        >
           <img src={item.icon} alt={item.label} className="menu-item__icon" />
           <Typography
             as="span"
@@ -21,7 +33,7 @@ const Menu = ({ items }: MenuProps) => {
           >
             {item.label}
           </Typography>
-        </li>
+        </NavLink>
       ))}
     </ul>
   );

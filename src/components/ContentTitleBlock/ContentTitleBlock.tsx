@@ -2,6 +2,7 @@ import { Flex } from 'antd';
 
 import { SelectorButton } from '../SelectorButton/SelectorButton';
 import { Typography } from '../Typography/Typography';
+
 import { myClamp } from '../../shared/utils';
 
 import './ContentTitleBlock.scss';

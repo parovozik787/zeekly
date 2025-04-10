@@ -1,7 +1,9 @@
 import { Flex } from 'antd';
 
-import { myClamp } from '../../shared/utils';
 import { Typography } from '../Typography/Typography';
+
+import { myClamp } from '../../shared/utils';
+
 import './MetricCardTooltip.scss';
 
 type MetricCardTooltipProps = {

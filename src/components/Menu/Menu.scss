@@ -46,6 +46,10 @@
     height: myClamp(22);
   }
 
+  &--active {
+    background-color: var(--color-blue-200);
+  }
+
   @media (max-width: $tablet-media) {
     justify-content: center;
 

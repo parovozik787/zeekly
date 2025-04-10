@@ -1,3 +1,15 @@
+import { responsiveSize } from '../../shared/utils';
+import { myClamp } from '../../shared/utils';
+import { createTooltipContent } from '../ChartTooltip/ChartTooltip';
+import { LegendName } from '../ChartLegend/types';
+import { EChartsOption } from 'echarts';
+
+const spendColor = '#2555ff';
+const conversationsColor = '#d3ddff';
+const cpaColor = '#FF713A';
+const asisColor = '#5f6061';
+const splitLineColor = '#e9eeff';
+
 const cpaMockData = [
   ['2023-11-29', 220],
   ['2023-11-30', 310],
@@ -100,4 +112,129 @@ const conversationsMockData = [
   ['2023-12-29', 1000],
 ];
 
-export { cpaMockData, spendMockData, conversationsMockData };
+const option: EChartsOption = {
+  legend: {
+    show: false,
+    data: [LegendName.Spend, LegendName.Conversations, LegendName.CPA],
+  },
+  xAxis: {
+    type: 'time',
+    min: new Date('2023-11-29').getTime(),
+    max: new Date('2023-12-29').getTime(),
+    axisLabel: {
+      color: asisColor,
+      fontSize: responsiveSize(14),
+      margin: responsiveSize(12),
+      formatter: (value) => {
+        const date = new Date(value);
+        return `${date.toLocaleString('en-US', { month: 'short' })} ${date.getDate()}`;
+      },
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLine: {
+      show: false,
+    },
+    splitLine: {
+      show: true,
+
+      lineStyle: {
+        color: splitLineColor,
+        width: responsiveSize(1),
+      },
+    },
+  },
+  yAxis: {
+    type: 'value',
+    min: 0,
+    max: 1200,
+    interval: 400,
+    axisLabel: {
+      color: asisColor,
+      fontSize: responsiveSize(14),
+      margin: responsiveSize(12),
+      formatter: (value) => {
+        if (value >= 1000) return value / 1000 + 'k';
+        return value.toString();
+      },
+    },
+    axisTick: {
+      show: false,
+    },
+    splitLine: {
+      show: true,
+      lineStyle: {
+        color: splitLineColor,
+        width: responsiveSize(1),
+      },
+    },
+  },
+  grid: {
+    left: 0,
+    right: 0,
+    bottom: 0,
+    top: responsiveSize(10),
+    containLabel: true,
+  },
+  series: [
+    {
+      name: LegendName.Spend,
+      type: 'bar',
+      data: spendMockData,
+      itemStyle: {
+        color: spendColor,
+        borderRadius: [responsiveSize(4), responsiveSize(4), 0, 0],
+      },
+    },
+    {
+      name: LegendName.Conversations,
+      type: 'bar',
+      data: conversationsMockData,
+      itemStyle: {
+        color: conversationsColor,
+        borderRadius: [responsiveSize(4), responsiveSize(4), 0, 0],
+      },
+    },
+    {
+      name: LegendName.CPA,
+      type: 'line',
+      data: cpaMockData,
+      smooth: true,
+      itemStyle: {
+        color: cpaColor,
+      },
+      lineStyle: {
+        color: cpaColor,
+        width: responsiveSize(2),
+      },
+      symbol: 'none',
+    },
+  ],
+  tooltip: {
+    trigger: 'axis',
+    position: function (point, _params, _dom, _rect, size) {
+      const tooltipWidth = size.contentSize[0];
+      const tooltipHeight = size.contentSize[1];
+
+      const x = point[0] - tooltipWidth / 2;
+      const y = point[1] - tooltipHeight - responsiveSize(20);
+
+      return [x, y];
+    },
+    extraCssText: `padding: 0; border: none; border-radius: ${myClamp(12)};`,
+    formatter: createTooltipContent,
+  },
+};
+
+export {
+  cpaMockData,
+  spendMockData,
+  conversationsMockData,
+  spendColor,
+  conversationsColor,
+  cpaColor,
+  asisColor,
+  splitLineColor,
+  option,
+};

@@ -1,7 +1,9 @@
 import { Flex, Tooltip } from 'antd';
 
-import { myClamp } from '../../../shared/utils';
 import { Typography } from '../../Typography/Typography';
+
+import { myClamp } from '../../../shared/utils';
+
 import './NameColumn.scss';
 
 const NameColumn = ({
