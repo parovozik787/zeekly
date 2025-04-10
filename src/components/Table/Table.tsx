@@ -13,7 +13,7 @@ export default function Table() {
       dataSource={data}
       pagination={false}
       bordered={false}
-      scroll={{ x: 'max-content', y: responsiveSize(760) }}
+      scroll={{ x: 'max-content', y: responsiveSize(705) }}
       className="table"
     />
   );

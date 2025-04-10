@@ -29,6 +29,7 @@ const Menu = ({ items }: MenuProps) => {
             as="span"
             lineHeight="90"
             color="dark"
+            weight="500"
             className="menu-item__label"
           >
             {item.label}

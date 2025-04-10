@@ -1,9 +1,9 @@
-import OverviewIcon from '../../assets/icons/overview.svg';
-import CreativeInsightsIcon from '../../assets/icons/creativeInsights.svg';
-import CreativeLibraryIcon from '../../assets/icons/creativeLibrary.svg';
-import BrandRadarIcon from '../../assets/icons/brandRadar.svg';
-import FireIcon from '../../assets/images/emoji.png';
-import MenuPlusIcon from '../../assets/icons/menuPlus.svg';
+import OverviewIcon from '../../shared/icons/overview.svg';
+import CreativeInsightsIcon from '../../shared/icons/creativeInsights.svg';
+import CreativeLibraryIcon from '../../shared/icons/creativeLibrary.svg';
+import BrandRadarIcon from '../../shared/icons/brandRadar.svg';
+import MenuPlusIcon from '../../shared/icons/menuPlus.svg';
+import FireIcon from '../../shared/images/emoji.png';
 
 export type MenuItem = {
   key: string;

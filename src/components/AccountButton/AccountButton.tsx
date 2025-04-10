@@ -4,8 +4,8 @@ import { Typography } from '../Typography/Typography';
 
 import { myClamp } from '../../shared/utils';
 
-import AccountIcon from '../../assets/icons/accountIcon.svg?react';
-import Carret from '../../assets/icons/carret.svg?react';
+import AccountIcon from '../../shared/icons/accountIcon.svg?react';
+import Carret from '../../shared/icons/carret.svg?react';
 
 import './AccountButton.scss';
 

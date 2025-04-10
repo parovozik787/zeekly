@@ -2,7 +2,7 @@ import type { TableProps } from 'antd';
 
 import NameColumn from './NameColumn/NameColumn';
 import Column from './Column/Column';
-import Image from '../../assets/images/Rectangle.png';
+import Image from '../../shared/images/Rectangle.png';
 
 import { DataType } from './types';
 import { HighlightLevel } from './types';

@@ -11,6 +11,6 @@ export type LegendData = {
 
 export const enum LegendName {
   Spend = 'Spend',
-  Conversations = 'Conversations',
+  Conversions = 'Conversions',
   CPA = 'CPA',
 }

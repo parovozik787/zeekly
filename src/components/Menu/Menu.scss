@@ -25,7 +25,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    width: calc(100% + myClamp(10));
+    width: calc(100% + myClamp(20));
     height: 100%;
     border-radius: myClamp(100);
     background-color: transparent;
@@ -47,7 +47,13 @@
   }
 
   &--active {
-    background-color: var(--color-blue-200);
+    &::before {
+      background-color: var(--color-blue-200);
+    }
+    .menu-item__label {
+      color: var(--color-primary-black);
+      font-weight: (--fw-600);
+    }
   }
 
   @media (max-width: $tablet-media) {

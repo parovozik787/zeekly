@@ -1,5 +1,22 @@
 .metric-card {
-  padding: myClamp(24);
+  padding: myClamp(21);
   margin: myClamp(-1);
   border: myClamp(1) solid var(--color-gray-light);
+  &__arrow {
+    color: var(--color-primary-dark);
+    &--positive {
+      transform: rotate(180deg);
+
+      & path {
+        stroke: var(--color-main-green);
+        color: var(--color-main-green);
+      }
+    }
+    &--negative {
+      & path {
+        stroke: var(--color-main-red);
+        color: var(--color-main-red);
+      }
+    }
+  }
 }

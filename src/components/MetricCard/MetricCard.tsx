@@ -3,13 +3,18 @@ import { Flex, Tooltip } from 'antd';
 import { Typography } from '../Typography/Typography';
 import { MetricCardTooltip } from '../MetricCardTooltip/MetricCardTooltip';
 
+import { Metric } from '../MetricsBlock/types';
+
 import { myClamp } from '../../shared/utils';
 
-import Arrow from '../../assets/icons/redArrowDown.svg?react';
+import Arrow from '../../shared/icons/redArrowDown.svg?react';
 
 import './MetricCard.scss';
+import clsx from 'clsx';
 
-const MetricCard = () => {
+type MetricCardProps = Metric;
+
+const MetricCard = ({ label, value, change, isPositive }: MetricCardProps) => {
   return (
     <Tooltip
       title={<MetricCardTooltip />}
@@ -23,16 +28,27 @@ const MetricCard = () => {
         justify="center"
         className="metric-card"
       >
-        <Typography weight="600">Spend</Typography>
-        <Flex vertical justify="space-between">
+        <Typography weight="600">{label}</Typography>
+        <Flex vertical justify="space-between" gap={myClamp(2)}>
           <Typography size="32" weight="600">
-            $29,696.04
+            {value}
           </Typography>
-          <Flex gap={myClamp(6)} align="center">
-            <Flex align="center" gap={myClamp(4)}>
-              <Arrow width={myClamp(11)} height={myClamp(11)} />
-              <Typography color="red" as="span">
-                1.23%
+          <Flex gap={myClamp(9)} align="center">
+            <Flex align="center" gap={myClamp(6)}>
+              <Arrow
+                width={myClamp(11)}
+                height={myClamp(11)}
+                className={clsx({
+                  'metric-card__arrow--positive': isPositive,
+                  'metric-card__arrow--negative': !isPositive,
+                })}
+              />
+              <Typography
+                color={isPositive ? 'green' : 'red'}
+                as="span"
+                weight="600"
+              >
+                {change}%
               </Typography>
             </Flex>
 

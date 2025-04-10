@@ -2,14 +2,14 @@ import { Flex } from 'antd';
 
 import { myClamp } from '../../shared/utils';
 import { Typography } from '../Typography/Typography';
-import PlusIcon from '../../assets/icons/plusIcon.svg';
-import FollowBrands from '../../assets/icons/followBrands.svg';
+import PlusIcon from '../../shared/icons/plusIcon.svg';
+import FollowBrands from '../../shared/icons/followBrands.svg';
 
 import './QuickActionsBlock.scss';
 
 export const QuickActionsBlock = () => {
   return (
-    <Flex vertical gap={myClamp(24)}>
+    <Flex vertical gap={myClamp(18)}>
       <Typography size="18" weight="600" as="h2">
         Quick actions
       </Typography>
@@ -35,7 +35,7 @@ export const QuickActionsBlock = () => {
           className="action"
         >
           <img src={FollowBrands} alt="Quick action" className="action__icon" />
-          <Flex vertical gap={myClamp(6)}>
+          <Flex vertical gap={myClamp(4)}>
             <Typography weight="600">Follow the Best Brands</Typography>
             <Typography color="shark">
               Explore ads from top brands to inspire your next campaign

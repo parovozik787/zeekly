@@ -5,7 +5,7 @@ import { LegendName } from '../ChartLegend/types';
 import { EChartsOption } from 'echarts';
 
 const spendColor = '#2555ff';
-const conversationsColor = '#d3ddff';
+const conversionsColor = '#d3ddff';
 const cpaColor = '#FF713A';
 const asisColor = '#5f6061';
 const splitLineColor = '#e9eeff';
@@ -78,7 +78,7 @@ const spendMockData = [
   ['2023-12-29', 900],
 ];
 
-const conversationsMockData = [
+const conversionsMockData = [
   ['2023-11-29', 300],
   ['2023-11-30', 550],
   ['2023-12-01', 720],
@@ -115,7 +115,7 @@ const conversationsMockData = [
 const option: EChartsOption = {
   legend: {
     show: false,
-    data: [LegendName.Spend, LegendName.Conversations, LegendName.CPA],
+    data: [LegendName.Spend, LegendName.Conversions, LegendName.CPA],
   },
   xAxis: {
     type: 'time',
@@ -188,11 +188,11 @@ const option: EChartsOption = {
       },
     },
     {
-      name: LegendName.Conversations,
+      name: LegendName.Conversions,
       type: 'bar',
-      data: conversationsMockData,
+      data: conversionsMockData,
       itemStyle: {
-        color: conversationsColor,
+        color: conversionsColor,
         borderRadius: [responsiveSize(4), responsiveSize(4), 0, 0],
       },
     },
@@ -230,9 +230,9 @@ const option: EChartsOption = {
 export {
   cpaMockData,
   spendMockData,
-  conversationsMockData,
+  conversionsMockData,
   spendColor,
-  conversationsColor,
+  conversionsColor,
   cpaColor,
   asisColor,
   splitLineColor,

@@ -6,7 +6,7 @@ import { ContentTitleBlock } from '../components/ContentTitleBlock/ContentTitleB
 import Table from '../components/Table/Table';
 import Chart from '../components/ChartBlock/ChartBlock';
 import { ContentContainer } from '../components/ContentContainer/ContentContainer';
-
+import { Typography } from '../components/Typography/Typography';
 export const Overview = () => {
   return (
     <ContentContainer>
@@ -20,7 +20,10 @@ export const Overview = () => {
       <Flex vertical gap={myClamp(24)}>
         <QuickActionsBlock />
       </Flex>
-      <Flex vertical gap={myClamp(24)}>
+      <Flex vertical gap={myClamp(16)}>
+        <Typography size="18" weight="600">
+          Top 10 creatives
+        </Typography>
         <Table />
       </Flex>
     </ContentContainer>

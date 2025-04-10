@@ -18,7 +18,7 @@ const Legend: React.FC<LegendProps> = ({
   legendSelection,
 }) => {
   return (
-    <Flex gap={myClamp(20)}>
+    <Flex gap={myClamp(16)}>
       {data.map((item) => (
         <Flex
           key={item.name}
@@ -27,8 +27,8 @@ const Legend: React.FC<LegendProps> = ({
           onClick={() => onLegendChange(item.name, !legendSelection[item.name])}
         >
           <LegendIcon color={item.color} type={item.type} />
-          <Typography>
-            {'— '}
+          <Typography size="12" color="shark">
+            {'– '}
             {item.name}
           </Typography>
         </Flex>

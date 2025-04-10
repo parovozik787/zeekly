@@ -4,7 +4,7 @@ import { Flex } from 'antd';
 import Sidebar from './components/Sidebar/Sidebar';
 import AppRoutes from './routes/AppRoutes';
 
-import './assets/styles/globals.scss';
+import './shared/styles/globals.scss';
 
 function App() {
   return (

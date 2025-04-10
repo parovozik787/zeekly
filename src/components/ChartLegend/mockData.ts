@@ -1,16 +1,12 @@
-import {
-  spendColor,
-  conversationsColor,
-  cpaColor,
-} from '../ChartBlock/mockData';
+import { spendColor, conversionsColor, cpaColor } from '../ChartBlock/mockData';
 import { LegendData, LegendName, LegendType } from './types';
 
 const legendData: LegendData[] = [
   { name: LegendName.Spend, type: LegendType.Bar, color: spendColor },
   {
-    name: LegendName.Conversations,
+    name: LegendName.Conversions,
     type: LegendType.Bar,
-    color: conversationsColor,
+    color: conversionsColor,
   },
   { name: LegendName.CPA, type: LegendType.Line, color: cpaColor },
 ];
